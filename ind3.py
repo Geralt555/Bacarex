@@ -1,3 +1,5 @@
+#  Дано предложение. Удалить из него все буквы о, стоящие на нечетных местах.
+
 def okiller(mstr):
     res = (''.join(char for n, char in enumerate(
         mstr) if not (char == 'о' and n % 2 == 0)))
