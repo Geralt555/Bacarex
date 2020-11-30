@@ -1,8 +1,11 @@
-line = "В соединении молекул"
+#  Дано предложение. Определить порядковые номера первой пары одинаковых соседних
+#  символов. Если таких символов нет, то должно быть напечатано соответствующее
+#  сообщение.
 
-for ind in range(len(line) - 1):
-    if line[ind] == line[ind + 1]:
-        print(ind + 1, ind + 2)
+line = "Змееед любит растения "
+ti, tv = 0, line[0]
+for ind, val in enumerate(line):
+    if val == tv and ind - ti == 1:
+        print(val, ' -> ', ti + 1, ind + 1)
         break
-else:
-    print('Таких нет!!!')
+    ti, tv = ind, val
